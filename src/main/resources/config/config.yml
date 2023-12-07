@@ -1,0 +1,23 @@
+ui-tests:
+  TestClassNamingRule:
+    active: true
+    includes: "**/androidTest/**"
+  TestMethodNamingRule:
+    active: true
+    unexpectedWords: [ 'test' ]
+    maxFullQualifierLength: 135
+    includes: "**/androidTest/**"
+  TestClassPrivateMemberRule:
+    active: true
+    baseTestClass: "BaseTestCase"
+    includes: "**/androidTest/**"
+  IsVisibleUsageRule:
+    active: true
+    includes: "**/androidTest/**"
+  LargeScreenObjectRule:
+    active: true
+    allowedLinesOfCode: 110
+    includes: "**/androidTest/**"
+  RestrictedKeywordRule:
+    active: true
+    includes: "**/androidTest/**"
