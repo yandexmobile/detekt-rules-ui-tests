@@ -40,6 +40,7 @@ class TestClassPrivateMemberRule(config: Config) : Rule(config) {
         super.visitProperty(property)
 
         if (!property.inTestClass(baseTestClass)) return
+        if (property.annotationEntries.any { it.shortName?.asString() == "Rule" }) return
 
         val isNonLocalVariable = !property.isConstant() && !property.isLocal
         if (isNonLocalVariable &&

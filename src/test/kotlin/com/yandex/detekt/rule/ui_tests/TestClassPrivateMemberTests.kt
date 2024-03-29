@@ -132,4 +132,20 @@ class TestClassPrivateMemberTests {
 
         assert(findings.isEmpty())
     }
+
+    @Test
+    fun containsRule() {
+        // language="kotlin"
+        val case =
+            """
+            class SomeTest: BaseTestCase() {
+                @get:Rule
+                val tmp = TemporaryFolder()
+            }
+            """.trimIndent()
+
+        val findings = rule.lint(case)
+
+        assert(findings.isEmpty())
+    }
 }

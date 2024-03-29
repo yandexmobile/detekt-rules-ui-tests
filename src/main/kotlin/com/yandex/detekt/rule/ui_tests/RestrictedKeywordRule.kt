@@ -14,7 +14,7 @@ class RestrictedKeywordRule(config: Config) : Rule(config) {
     override val issue = Issue(
         id = javaClass.simpleName,
         severity = Severity.Defect,
-        description = "Restricted keyword for test method and ScreenObject",
+        description = "Restricted keyword for test method, ScreenObject or Scenario",
         debt = Debt.FIVE_MINS,
     )
 

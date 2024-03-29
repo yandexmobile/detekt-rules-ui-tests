@@ -7,7 +7,7 @@ A set of [Detekt](https://detekt.dev) rules to help prevent common errors in UI-
 [[RU] Detekt: How static analysis helps to improve autotest code](https://habr.com/p/779152)
 
 TestClassNamingRule: 
-A test class name should fit the naming pattern;
+A test class name should fit the naming convention;
 
 TestMethodNamingRule:
 Test method name should not be long and contain unnecessary words;
@@ -46,14 +46,14 @@ ui-tests:
     maxFullQualifierLength: 135
     includes: "**/androidTest/**"
   TestClassPrivateMemberRule:
-    active: true
+    active: false
     baseTestClass: "BaseTestCase"
     includes: "**/androidTest/**"
   IsVisibleUsageRule:
     active: true
     includes: "**/androidTest/**"
   LargeScreenObjectRule:
-    active: true
+    active: false
     allowedLinesOfCode: 110
     includes: "**/androidTest/**"
   RestrictedKeywordRule:
