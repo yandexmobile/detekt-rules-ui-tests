@@ -13,7 +13,7 @@ import org.jetbrains.kotlin.psi.psiUtil.getSuperNames
 
 private const val TEST_ANNOTATION = "Test"
 private const val SCENARIO_BASE_CLASS = "BaseScenario"
-private val screenBaseClasses = listOf("KScreen", "UiScreen")
+private val screenBaseClasses = listOf("KScreen", "UiScreen", "ComposeScreen")
 
 fun KtElement.inTestMethod(): Boolean = getNonStrictParentOfType<KtNamedFunction>()?.isTestMethod() ?: false
 
@@ -29,10 +29,10 @@ fun KtElement.inTestClass(baseTestClass: String): Boolean {
 
 fun KtClass.isTestClass(): Boolean = body?.functions.orEmpty().any(KtNamedFunction::isTestMethod)
 
-fun KtElement.isOrInScreenObject(): Boolean {
+fun KtElement.isOrInScreenObject(baseClasses: List<String> = screenBaseClasses): Boolean {
     return getNonStrictParentOfType<KtClassOrObject>()
         ?.getSuperNames()
-        .orEmpty().any { it in screenBaseClasses }
+        .orEmpty().any { it in baseClasses }
 }
 
 fun KtElement.inScenario(): Boolean {
