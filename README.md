@@ -46,14 +46,14 @@ ui-tests:
     maxFullQualifierLength: 135
     includes: "**/androidTest/**"
   TestClassPrivateMemberRule:
-    active: true
+    active: false
     baseTestClass: "BaseTestCase"
     includes: "**/androidTest/**"
   IsVisibleUsageRule:
     active: true
     includes: "**/androidTest/**"
   LargeScreenObjectRule:
-    active: true
+    active: false
     allowedLinesOfCode: 110
     includes: "**/androidTest/**"
   RestrictedKeywordRule:
