@@ -7,6 +7,9 @@ import io.gitlab.arturbosch.detekt.api.*
 import org.jetbrains.kotlin.psi.KtCallExpression
 import org.jetbrains.kotlin.resolve.calls.util.getCalleeExpressionIfAny
 
+/**
+ * https://developer.android.com/reference/androidx/test/espresso/matcher/ViewMatchers#withEffectiveVisibility(androidx.test.espresso.matcher.ViewMatchers.Visibility)
+ */
 class IsVisibleUsageRule(config: Config) : Rule(config) {
 
     override val issue = Issue(
