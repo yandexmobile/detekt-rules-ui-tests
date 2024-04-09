@@ -16,7 +16,7 @@ TestClassPrivateMemberRule:
 Members of test class must use private modifier;
 
 IsVisibleUsageRule:
-In general, 'Espresso isVisible' should not be used -> use 'isDisplayed';
+In general, 'Kaspresso isVisible' should not be used -> use 'isDisplayed';
 
 LargeScreenObjectRule:
 Split a large ScreenObject into PageElement's and combine them on this SO;
