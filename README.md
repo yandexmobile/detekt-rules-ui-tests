@@ -30,7 +30,7 @@ Add detekt rules in your `build.gradle.kts`
 
 ```
 dependencies {
-    implementation(files("detekt-rules-ui-tests-0.1.0-SNAPSHOT.jar"))
+    detektPlugins("com.yandex.detekt:detekt-rules-ui-tests:0.1.1")
 }
 ```
 
