@@ -29,7 +29,7 @@ class IsVisibleUsageRule(config: Config) : Rule(config) {
                 CodeSmell(
                     issue,
                     Entity.from(expression),
-                    "In general, 'Espresso isVisible' should not be used -> use 'isDisplayed'"
+                    "In general, 'Kaspresso isVisible' should not be used -> use 'isDisplayed'"
                 )
             )
         }
