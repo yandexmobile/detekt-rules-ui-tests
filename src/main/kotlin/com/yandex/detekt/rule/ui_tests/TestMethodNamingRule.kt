@@ -25,7 +25,7 @@ class TestMethodNamingRule(config: Config) : Rule(config) {
 
         val actualShortName = function.name.toString()
         for (unexpectedWord in unexpectedWords) {
-            if (actualShortName.lowercase().contains(unexpectedWord)) {
+            if (actualShortName.contains(unexpectedWord, ignoreCase = true)) {
                 report(
                     CodeSmell(
                         issue,
